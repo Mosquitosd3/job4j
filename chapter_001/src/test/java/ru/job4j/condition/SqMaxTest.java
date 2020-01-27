@@ -17,8 +17,8 @@ public class SqMaxTest {
 
     @Test
     public void whenThrideMax(){
-        int result = SqMax.max(1,3,5,2);
-        assertThat(result, is(5));
+        int result = SqMax.max(6,4,7,5);
+        assertThat(result, is(7));
     }
 
     @Test
