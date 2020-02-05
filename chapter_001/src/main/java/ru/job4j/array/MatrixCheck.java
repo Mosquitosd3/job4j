@@ -6,6 +6,7 @@ public class MatrixCheck {
         for (int cell = 0; cell < board.length; cell++) {
                 if (board[row][cell] != 'X') {
                     result = false;
+                    break;
                 }
         }
         return result;
@@ -16,6 +17,8 @@ public class MatrixCheck {
         for(int row = 0; row < board.length; row++) {
             if (board[row][column] != 'X') {
                 result = false;
+                break;
+
             }
         }
         return result;
@@ -27,5 +30,16 @@ public class MatrixCheck {
             rsl[index] = board[index][index];
         }
         return rsl;
+    }
+
+    public static boolean isWin(char[][] board){
+        boolean result = false;
+        for(int index = 0; index < 5; index++) {
+           if(board[index][index] == 'X') {
+               if (monoHorizontal(board, index) || monoVertical(board, index));
+               result = true;
+           }
+        }
+        return result;
     }
 }
