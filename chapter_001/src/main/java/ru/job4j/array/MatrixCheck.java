@@ -38,8 +38,11 @@ public class MatrixCheck {
            if(board[index][index] == 'X') {
                if (monoHorizontal(board, index) || monoVertical(board, index));
                result = true;
+               break;
            }
         }
         return result;
     }
+
+
 }
