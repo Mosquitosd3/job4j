@@ -5,26 +5,19 @@ import static org.junit.Assert.assertThat;
 
 public class MaxTest {
     @Test
-    public void whenMax1To2the2(){
-        int result = Max.max(1,2);
+    public void whenMax1To2the2() {
+        int result = Max.max(1, 2);
         assertThat(result, is (2));
     }
 
     @Test
-    public void isMaxFirst(){
-        int result = Max.max(2,1);
-        assertThat(result, is (2));
+    public void maxFromThree() {
+        int result = Max.max(3,5,2);
+        assertThat(result, is(5));
     }
 
     @Test
-    public void isMaxSecond(){
-        int result = Max.max(1,3);
-        assertThat(result, is (3));
-    }
-
-    @Test
-    public void isMaxFirstOrSecond(){
-        int result = Max.max(10,10);
-        assertThat(result, is(10));
+    public void maxFromFour() {
+        int result = Max.max(4, 6, 7, 1);
     }
 }
