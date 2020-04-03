@@ -50,8 +50,8 @@ public class Tracker {
         Item[] result = new Item[position];
         int size = 0;
         for (int index = 0; index < this.items.length; index++) {
-            if (this.items[index].getName().equals(key)) {
-                result[index] = this.items[index];
+            if (this.items[index] != null && this.items[index].getName().equals(key)) {
+                result[size] = this.items[index];
                 size++;
             }
         }

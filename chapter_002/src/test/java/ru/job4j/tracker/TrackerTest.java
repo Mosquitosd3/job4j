@@ -21,13 +21,13 @@ public class TrackerTest {
      * Тест метод, для поиска всех Item без Null Элементов.
      */
     @Test
-    public void findAll() {
+    public void findByAll() {
         Tracker tracker = new Tracker();
         Item first = new Item("first");
         Item second = new Item("second");
         tracker.add(first);
         tracker.add(second);
-        Item[] expected = new Item[]{first, second};
+        Item[] expected = new Item[] {first, second};
         assertThat(expected, is(tracker.findAll()));
     }
 
@@ -35,11 +35,14 @@ public class TrackerTest {
      * Тест метод, для поиска Item по имени.
      */
     @Test
-    public void findName() {
+    public void findByName() {
         Tracker tracker = new Tracker();
         Item first = new Item("first");
+        Item second = new Item("second");
         tracker.add(first);
-        assertThat("first", is(first.getName()));
+        tracker.add(second);
+        Item[] expected = new Item[] {first};
+        assertThat(expected, is(tracker.findByName("first")));
     }
 
 
