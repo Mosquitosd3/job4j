@@ -33,6 +33,25 @@ public class Tracker {
         this.items[index] = item;
     }
 
+    /**
+     *удаение заявки из массива items
+     */
+    public boolean delete(String id) {
+        boolean rsl = false;
+        if (findById(id) != null) {
+            int index = indexOf(id);
+            this.items[index] = null;
+            int start = index + 1;
+            int distPost = index;
+            int size = this.position - index;
+            System.arraycopy(this.items, start, this.items, distPost, size);
+            items[position - 1] = null;
+            position--;
+            rsl = true;
+        }
+        return rsl;
+    }
+
 
     /**
      * Метод генерирует уникальный ключ для заявки.
