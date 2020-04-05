@@ -25,6 +25,16 @@ public class Tracker {
     }
 
     /**
+     *Замена заявки
+     */
+    public void replace(String id, Item item) {
+        int index = indexOf(id);
+        item.setId(id);
+        this.items[index] = item;
+    }
+
+
+    /**
      * Метод генерирует уникальный ключ для заявки.
      * Так как у заявки нет уникальности полей, имени и описания. Для идентификации нам нужен уникальный ключ.
      * @return Уникальный ключ.
@@ -32,6 +42,20 @@ public class Tracker {
     private String generateId() {
         Random rm = new Random();
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
+    }
+
+    /**
+     * @return index по id
+     */
+    private int indexOf(String id) {
+        int rsl = -1;
+        for (int index = 0; index < position; index++) {
+            if (items[index].getId().equals(id)) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
     }
 
     /**
@@ -63,14 +87,8 @@ public class Tracker {
      * @return возвращает найденный Item. Если Item не найден - возвращает null.
      */
     public Item findById(String id) {
-        Item result = null;
-        for (int i = 0; i < this.position; i++) {
-            if (this.items[i].getId().equals(id)) {
-                result = this.items[i];
-                break;
-            }
-        }
-        return result;
+        int index = indexOf(id);
+        return index != -1 ? items[index] : null;
     }
 
 }
