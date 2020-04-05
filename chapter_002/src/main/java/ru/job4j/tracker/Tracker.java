@@ -49,8 +49,8 @@ public class Tracker {
     public Item[] findByName(String key) {
         Item[] result = new Item[position];
         int size = 0;
-        for (int index = 0; index < this.items.length; index++) {
-            if (this.items[index] != null && this.items[index].getName().equals(key)) {
+        for (int index = 0; index < this.position; index++) {
+            if (this.items[index].getName().equals(key)) {
                 result[size] = this.items[index];
                 size++;
             }
@@ -64,7 +64,7 @@ public class Tracker {
      */
     public Item findById(String id) {
         Item result = null;
-        for (int i = 0; i < this.items.length; i++) {
+        for (int i = 0; i < this.position; i++) {
             if (this.items[i].getId().equals(id)) {
                 result = this.items[i];
                 break;
