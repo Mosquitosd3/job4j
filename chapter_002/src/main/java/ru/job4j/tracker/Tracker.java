@@ -27,10 +27,15 @@ public class Tracker {
     /**
      *Замена заявки
      */
-    public void replace(String id, Item item) {
+    public boolean replace(String id, Item item) {
+        boolean rsl = false;
         int index = indexOf(id);
-        item.setId(id);
-        this.items[index] = item;
+        if (index != -1) {
+            item.setId(id);
+            this.items[index] = item;
+            rsl = true;
+        }
+        return rsl;
     }
 
     /**
