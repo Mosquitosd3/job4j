@@ -43,8 +43,8 @@ public class Tracker {
      */
     public boolean delete(String id) {
         boolean rsl = false;
-        if (findById(id) != null) {
-            int index = indexOf(id);
+        int index = indexOf(id);
+        if (index != -1) {
             this.items[index] = null;
             int start = index + 1;
             int distPost = index;
