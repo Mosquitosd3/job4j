@@ -24,8 +24,7 @@ public class ValidateInputTest {
 
     @Test
     public void whenInvalidInput() {
-        String[] data = {"one", "1"};
-        ValidateInput input = new ValidateStubInput(data);
+        ValidateInput input = new ValidateInput(new StubInput(new String[] {"one", "1"}));
         input.askInt("Enter");
         assertThat(
                 mem.toString(),
@@ -37,7 +36,7 @@ public class ValidateInputTest {
     @Test
     public void whenMoreMaxNumber() {
         String[] data = {"3", "1"};
-        ValidateInput input = new ValidateStubInput(data);
+        ValidateInput input = new ValidateInput(new StubInput(data));
         input.askInt("Enter", data.length);
         assertThat(mem.toString(), is(String.format("Please select key from menu.%n")));
         System.setOut(out);
