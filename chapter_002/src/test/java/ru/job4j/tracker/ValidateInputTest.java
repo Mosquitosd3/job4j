@@ -33,12 +33,4 @@ public class ValidateInputTest {
         System.setOut(out);
     }
 
-    @Test
-    public void whenMoreMaxNumber() {
-        String[] data = {"3", "1"};
-        ValidateInput input = new ValidateInput(new StubInput(data));
-        input.askInt("Enter", data.length);
-        assertThat(mem.toString(), is(String.format("Please select key from menu.%n")));
-        System.setOut(out);
-    }
 }
