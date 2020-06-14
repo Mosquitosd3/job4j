@@ -18,7 +18,7 @@ public class MatrixCheckTest {
     }
 
     @Test
-    public void whenFirstRowMonoHorizontal(){
+    public void whenFirstRowMonoHorizontal() {
         char[][] input = {
                 {'X', 'X', 'X', 'X'},
                 {' ', ' ', ' ', ' '},

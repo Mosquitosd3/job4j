@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 
 public class ArrayCharTest {
     @Test
-    public void whenStartWithPrefixThenTrue(){
+    public void whenStartWithPrefixThenTrue() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'e'};
         boolean result = ArrayChar.startWith(word, pref);
@@ -16,7 +16,7 @@ public class ArrayCharTest {
 
      //для проверки будет ли работать алгоритм с разным размером префикса
     @Test
-    public void whenPrefixConsistsThreeElementsThenTrue(){
+    public void whenPrefixConsistsThreeElementsThenTrue() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'e', 'l'};
         boolean result = ArrayChar.startWith(word, pref);
@@ -24,7 +24,7 @@ public class ArrayCharTest {
     }
 
     @Test
-    public void whenNotStartWithPrefixThenFalse(){
+    public void whenNotStartWithPrefixThenFalse() {
         char[] word = {'H', 'e', 'l', 'l', 'o'};
         char[] pref = {'H', 'i'};
         boolean result = ArrayChar.startWith(word, pref);

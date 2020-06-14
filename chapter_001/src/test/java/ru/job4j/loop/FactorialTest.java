@@ -5,14 +5,14 @@ import static org.junit.Assert.assertThat;
 
 public class FactorialTest {
 @Test
-    public void whenCalculateFactorialForFiveThenOneHundreedTwenty(){
+    public void whenCalculateFactorialForFiveThenOneHundreedTwenty() {
        int rsl = Factorial.cal(5);
        int expected = 120;
        assertThat(rsl, is(expected));
     }
 
     @Test
-    public void whenCalculateFactorialZerohenOne(){
+    public void whenCalculateFactorialZerohenOne() {
     int rsl = Factorial.cal(0);
         int expected = 1;
         assertThat(rsl, is(expected));

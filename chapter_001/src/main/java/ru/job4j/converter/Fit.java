@@ -1,11 +1,11 @@
 package ru.job4j.converter;
 
 public class Fit {
-    public static double manWeigth(double heigth){
-        return (heigth -100) * 1.15;
+    public static double manWeigth(double heigth) {
+        return (heigth - 100) * 1.15;
     }
 
-    public static double womanWeigth(double heigth){
+    public static double womanWeigth(double heigth) {
         return (heigth - 110) * 1.15;
     }
 

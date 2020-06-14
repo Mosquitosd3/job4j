@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 
 public class DefragmentTest {
     @Test
-    public void notFirstNull(){
+    public void notFirstNull() {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
         String[] compressed = Defragment.compress(input);
         String[] expected = {"I", "wanna", "be", "compressed", null, null, null};

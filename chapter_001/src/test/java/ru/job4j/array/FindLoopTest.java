@@ -16,7 +16,7 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenArrayHasNotEl(){
+    public void whenArrayHasNotEl() {
         FindLoop find = new FindLoop();
         int[] input = new int[] {1, 10, 0};
         int value = 7;

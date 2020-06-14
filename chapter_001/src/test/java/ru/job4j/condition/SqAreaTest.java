@@ -4,7 +4,7 @@ import org.junit.Assert;
 
 public class SqAreaTest {
     @Test
-    public void area(){
+    public void area() {
       int p = 4;
       int k = 1;
       double expected = 1.0;
@@ -13,7 +13,7 @@ public class SqAreaTest {
     }
 
     @Test
-    public void area2(){
+    public void area2() {
         int p = 6;
         int k = 2;
         double expected = 2.0;

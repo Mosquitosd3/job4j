@@ -1,19 +1,19 @@
 package ru.job4j.converter;
 
 public class Converter {
-    public static int rubleToEuro(int value){
+    public static int rubleToEuro(int value) {
         return value / 70;
     }
 
-    public static int rubleToDollar(int value){
+    public static int rubleToDollar(int value) {
         return value / 60;
     }
 
-    public static int euroToRuble(int value){
+    public static int euroToRuble(int value) {
         return value * 70;
     }
 
-    public static int dollarToRuble(int value){
+    public static int dollarToRuble(int value) {
         return value * 60;
     }
 
@@ -38,7 +38,7 @@ public class Converter {
         int euroToRuble = euroToRuble(100);
         System.out.println("100 euro are " + euroToRuble + " Rubles");
         int in3 = 100;
-        int expected3 =7000;
+        int expected3 = 7000;
         int out3 = euroToRuble(in3);
         boolean passed3 = expected3 == out3;
         System.out.println("100 euro are 7000. Test result : " + passed3);

@@ -1,15 +1,15 @@
 package ru.job4j.condition;
 
 public class SqArea {
-    public static double square(int p, int k){
+    public static double square(int p, int k) {
         double h = p / (2 * (k + 1));
-        double L = h * k ;
-        double s = L * h;
+        double l = h * k;
+        double s = l * h;
         return s;
     }
 
     public static void main(String[] args) {
-        double result = square(4,1);
+        double result = square(4, 1);
         System.out.println("p = 4, k = 1, s =1, real = " + result);
 
         double result2 = square(6, 2);

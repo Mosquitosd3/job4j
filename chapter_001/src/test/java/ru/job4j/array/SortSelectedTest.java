@@ -14,7 +14,7 @@ public class SortSelectedTest {
     }
 
     @Test
-     public void whenThreeElementsSort(){
+     public void whenThreeElementsSort() {
         int[] input = new int[] {3, 2, 2};
         int[] result = SortSelected.sort(input);
         int[] expect = new int[] {2, 2, 3};

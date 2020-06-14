@@ -6,7 +6,7 @@ import static org.hamcrest.core.Is.is;
 
 public class EndsWithTest {
     @Test
-    public void whenEndWithPrefixThenTrue(){
+    public void whenEndWithPrefixThenTrue() {
         char[] word = new char[] {'H', 'e', 'l', 'l', 'o'};
         char[] post = new char[] {'l', 'o'};
         boolean result = EndsWith.endsWith(word, post);
@@ -22,7 +22,7 @@ public class EndsWithTest {
     }
 
     @Test
-    public void whenEndWithPostConsistThreeElementsThenTrue(){
+    public void whenEndWithPostConsistThreeElementsThenTrue() {
         char[] word = new char[] {'H', 'e', 'l', 'l', 'o'};
         char[] post = new char[] {'l', 'l', 'o'};
         boolean result = EndsWith.endsWith(word, post);
