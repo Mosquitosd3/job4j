@@ -15,7 +15,7 @@ public class PhoneDictionary {
             if (persons.get(index).getName().contains(key)
               || persons.get(index).getSurname().contains(key)
               || persons.get(index).getPhone().contains(key)
-              || persons.get(index).getPhone().contains(key)) {
+              || persons.get(index).getAddress().contains(key)) {
                 result.add(persons.get(index));
             }
         }
