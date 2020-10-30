@@ -2,10 +2,14 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
+
+import java.util.List;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
-
+ /*
 public class StartUITest {
+
     @Test
     public void whenExit() {
         StubInput input = new StubInput(new String[]{"0"});
@@ -13,10 +17,12 @@ public class StartUITest {
         new StartUI().init(input, new Tracker(), new UserAction[] {action});
         assertThat(action.isCall(), is(true));
     }
-    /*
+
+
+
     @Test
     public void whenAddItem() {
-        String[] answer = {"Fix PC"};
+        List<String> answer = List.of("Fix PC");
         Input input = new StubInput(answer);
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
@@ -46,7 +52,7 @@ public class StartUITest {
         Item delete = tracker.findById(item.getId());
         assertNull(delete);
     }
-     */
+
 }
 
-
+ */

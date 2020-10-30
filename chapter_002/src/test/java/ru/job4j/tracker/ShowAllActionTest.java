@@ -3,6 +3,7 @@ package ru.job4j.tracker;
 import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.List;
 import java.util.StringJoiner;
 
 import static org.hamcrest.core.Is.is;
@@ -19,7 +20,8 @@ public class ShowAllActionTest {
         Item item = new Item("fix bug");
         tracker.add(item);
         ShowAllAction act = new ShowAllAction();
-        act.execute(new StubInput(new String[]{}), tracker);
+        List<String> list = List.of("fix bug");
+        act.execute(new StubInput(list), tracker);
         String expect = new StringJoiner(System.lineSeparator(), "", System.lineSeparator())
                 .add(item.getId() + " " + item.getName())
                 .toString();
