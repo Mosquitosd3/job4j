@@ -15,6 +15,7 @@ public class UniqueText {
         for (String el: text) {
             if(!chek.contains(el)) {
                 rsl = false;
+                break;
             }
 
         }
