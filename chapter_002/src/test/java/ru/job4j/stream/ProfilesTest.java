@@ -12,12 +12,19 @@ public class ProfilesTest {
     @Test
     public void collect() {
         Profiles profiles = new Profiles();
-        List<Address> expect = List.of(
+        List<Address> list = List.of(
+                new Address("London", "Baker street", 221, 1),
                 new Address("London", "Baker street", 221, 1),
                 new Address("Donetsk", "Dobrovolscogo", 1, 14),
                 new Address("Moscow", "Read square", 1, 1)
         );
-        List<Profile> input = expect.stream().map(Profile::new).collect(Collectors.toList());
+
+        List<Address> expect = List.of(
+                new Address("Donetsk", "Dobrovolscogo", 1, 14),
+                new Address("London", "Baker street", 221, 1),
+                new Address("Moscow", "Read square", 1, 1)
+        );
+        List<Profile> input = list.stream().map(Profile::new).collect(Collectors.toList());
         List<Address> rsl = profiles.collect(input);
         assertThat(rsl, is(expect));
     }
