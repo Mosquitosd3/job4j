@@ -18,6 +18,7 @@ public class ListToMapTest {
                 new Student(60, "Surname1"),
                 new Student(10, "Surname2"),
                 new Student(30, "Surname3"),
+                new Student(40, "Surname4"),
                 new Student(40, "Surname4")
         );
         Map<String, Student> expect = Map.of(

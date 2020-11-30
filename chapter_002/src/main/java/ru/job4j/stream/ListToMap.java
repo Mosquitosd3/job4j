@@ -6,11 +6,6 @@ import java.util.stream.Collectors;
 
 public class ListToMap {
     public Map<String, Student> studentToMap(List<Student> list) {
-        Map<String, Student> rsl =
-                list.stream()
-                .distinct()
-                .collect(Collectors.toMap(Student::getSurname, student -> student)
-                );
-        return rsl;
+        return list.stream().collect(Collectors.toMap(Student::getSurname, student -> student,(student, student2) -> student));
     }
 }
