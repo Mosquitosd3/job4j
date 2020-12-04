@@ -33,7 +33,7 @@ public class DepartmentsTest {
                 "K1/SK2"
         );
 
-        List<String> expect = Arrays.asList(
+        List<String> expect = List.of(
                 "K2",
                 "K2/SK1",
                 "K2/SK1/SSK1",
